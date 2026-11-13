@@ -24,7 +24,7 @@ The dataset includes the following key columns:
 * **Language:** Python
 * **Libraries:** 
   * `Pandas` — data cleaning, transformation, grouping, and aggregation
-  * `Plotly Express / Graph Objects` — interactive visualization
+  * `Seaborn` — exploratory data visualization and statistical graphics
   * `SciPy` — statistical analysis and hypothesis testing
   * `SQLite3` — database operations (where applicable)
 
