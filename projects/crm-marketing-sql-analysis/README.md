@@ -51,8 +51,6 @@ The analysis is built on a relational CRM database consisting of 5 core tables:
 
 ## 📈 Key Findings
 
-## 📈 Key Findings
-
 | ARPPU (Base) | Response (Base) | Mailing Name | Campaign ID | Subject | ARPPU (CTR) | Response (CTR) | Count Customers | Delta | Estimated Uplift (`privlecli`) |
 | :---: | :---: | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | 227.71 | 0.66 | `03_07_2013_special_offer` | camp_3512 | Специальное предложение для постоянных клиентов! | 168.16 | 0.39 | 371 | +0.27 | 22,809.71 |
