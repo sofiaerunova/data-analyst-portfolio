@@ -51,10 +51,16 @@ The analysis is built on a relational CRM database consisting of 5 core tables:
 
 ## 📈 Key Findings
 
-| Campaign ID | Mailing Name | Subject | ARPPU (Base) | Response (Base) | ARPPU (CTR) | Response (CTR) | Response Delta | Estimated Uplift (`privlecli`) |
-| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **camp_3512** | `03_07_2013_special_offer` | Специальное предложение для постоянных клиентов! | 227 | 0.66 | 168 | 0.39 | **+0.27** | **22,738.59** |
-| **camp_35367** | `28_06_2023_sale_5%` | Скидка 5% на следующую покупку! | 266 | 0.78 | 235
+## 📈 Key Findings
+
+| ARPPU (Base) | Response (Base) | Mailing Name | Campaign ID | Subject | ARPPU (CTR) | Response (CTR) | Count Customers | Delta | Estimated Uplift (`privlecli`) |
+| :---: | :---: | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| 227.71 | 0.66 | `03_07_2013_special_offer` | camp_3512 | Специальное предложение для постоянных клиентов! | 168.16 | 0.39 | 371 | +0.27 | 22,809.71 |
+| 266.68 | 0.78 | `28_06_2023_sale_5%` | camp_35367 | Скидка 5% на следующую покупку! | 235.05 | 0.74 | 1,012 | +0.04 | 10,795.21 |
+| 290.13 | 0.82 | `23_06_2023_win_prize_A` | camp_3581 | Выиграй приз при любой покупке! | 284.55 | 0.80 | 1,015 | +0.02 | 5,889.64 |
+| 282.32 | 0.81 | `23_06_2023_win_prize_B` | camp_3581 | Выиграй приз при любой покупке! | 284.55 | 0.80 | 1,015 | +0.01 | 2,865.55 |
+| 290.13 | 0.82 | `23_06_2023_win_prize_A` | camp_3581 | Выиграй приз при любой покупке! | 308.25 | 0.82 | 525 | 0.00 | 0.00 |
+| 282.32 | 0.81 | `23_06_2023_win_prize_B` | camp_3581 | Выиграй приз при любой покупке! | 308.25 | 0.82 | 525 | -0.01 | -1,482.18 |
 
 * **Top Performing Campaign (`camp_3512`):** The loyalty special offer generated the highest incremental uplift (**22,738.59**), outperforming its CTR counterpart by **+27 percentage points** in response rate (66% vs. 39%) and achieving a significantly higher ARPPU (227 vs. 168).
 * **Strong Discount Conversion (`camp_35367`):** The 5% discount mailing maintained a high baseline conversion rate of **78%**, delivering an incremental uplift of **10,767.68** over the CTR variant.
