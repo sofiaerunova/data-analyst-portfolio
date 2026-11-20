@@ -2,7 +2,7 @@
 
 An interactive 3-page **Power BI** business intelligence dashboard analyzing 4 years of retail operations (2022–2025) for a wizarding goods store: revenue dynamics, product performance, promotional campaign ROI, customer demographics, and supplier reliability[cite: 12, 13, 14].
 
-🔗 **[View Full PDF Report](./hogwarts-sales-dashboard.pdf)** *(optional: add the link after uploading the PDF file to this folder)*
+🔗 **[View Full PDF Report]([./hogwarts-sales-dashboard.pdf](https://raw.githubusercontent.com/sofiaerunova/data-analyst-portfolio/refs/heads/main/projects/hogwarts-sales-powerbi-dashboard/hogwarts-sales-dashboard.pdf))** *(optional: add the link after uploading the PDF file to this folder)*
 
 ---
 
