@@ -17,6 +17,8 @@ The project is built on a relational synthetic retail dataset modeling a wizardi
 * **`customers` (Customer Profiles):** ~1,000 active buyers with demographic and wizarding attributes such as Hogwarts house (`Gryffindor`, `Slytherin`, `Ravenclaw`, `Hufflepuff`), year/course, occupation (`Herbologist`, `Dragon Keeper`, `Healer`, `Quidditch Player`, `Ministry of Magic Employee`, `Auror`), and customer segment (`adult` vs. `student`)[cite: 12, 14].
 * **`campaigns` (Marketing Campaigns):** Promotional initiatives (`Back to Hogwarts Sale`, `Holiday Broom Fest`, `Quidditch World Cup Promo`) with annual marketing budgets (`spend`) and active periods[cite: 13].
 * **`suppliers` (Suppliers):** Vendor directory containing supplier names, delivery lead time in days (`lead_time_days`), and reliability ratings (`reliability`)[cite: 14].
+<img width="1081" height="714" alt="2026-11-20_13-11-09" src="https://github.com/user-attachments/assets/d0581c28-6654-4d96-aa5b-9d1cdd8278f2" />
+
 
 ---
 
@@ -28,17 +30,19 @@ The project is built on a relational synthetic retail dataset modeling a wizardi
 * **Category & Payment Breakdown:** Horizontal bar chart by product category (`Broom` leads with **3.5M**, followed by `Kid Broom` and `Quidditch Wear` at **1.1M** each) and a donut chart showing an even split across payment methods (`Gringotts Credit` 33.96%, `Galleons` 33.36%, `Barter` 32.68%)[cite: 12].
 * **Top-10 Products Table:** Ranked by revenue with price and units sold (`Tesla Thunder`, `Ford Firebolt`, and `Nissan Nimbus` lead revenue)[cite: 12].<img width="1314" height="738" alt="2026-11-20_13-06-27" src="https://github.com/user-attachments/assets/25d8fb24-6444-4255-9c61-194c3aa4d1b3" />
 
-
 ### Page 2: Marketing Campaign Effectiveness (`Эффективность маркетинговых компаний`)
 * **Promo KPIs:** Promo Revenue (**1.9M** / **25%** share of total revenue), Total Campaign Spend (**18K**), Overall ROMI (**103**)[cite: 13].
 * **Campaign Performance & ROMI:** Breakdown across three seasonal campaigns (`Back to Hogwarts Sale`, `Holiday Broom Fest`, `Quidditch World Cup Promo`) by year, spend, orders, and ROMI[cite: 13].
 * **Promo vs. Organic Behavior:** Comparison of Average Order Value (**370** promo vs. **372** non-promo) and Units Per Transaction (**3.23** vs. **3.28**)[cite: 13].
+<img width="1316" height="738" alt="2026-11-20_13-09-46" src="https://github.com/user-attachments/assets/6d5f2811-ed6b-4362-8cd8-f0032b60b3d4" />
+
 
 ### Page 3: Customers & Suppliers (`Клиенты и поставщики`)
 * **Customer Metrics:** **1.0K** active buyers generating **7K** average revenue per customer; segment split between **Adults (79.79%)** and **Students (20.21%)**[cite: 14].
 * **Hogwarts Houses & Occupations:** Revenue and AOV across `Gryffindor`, `Slytherin`, `Ravenclaw`, and `Hufflepuff`, plus top occupations (`Herbologist`, `Dragon Keeper`, `Healer`)[cite: 14].
 * **Supplier Quadrant (Scatter Chart):** Evaluates suppliers by **Average Lead Time (days)** vs. **Average Reliability** (`Firebolt Consortium` and `Nimbus Racing Broom Co.` lead in speed and reliability, while `Comet Trading Ltd.` shows longer delivery times and lower reliability)[cite: 14].
-<img width="1314" height="738" alt="2026-11-20_13-06-27" src="https://github.com/user-attachments/assets/863dac9c-339d-48a5-8ecc-3e267c62d1ec" />
+<img width="1314" height="736" alt="2026-11-20_13-10-24" src="https://github.com/user-attachments/assets/6d67d3fe-0c61-4ab2-a71a-737abac13a3c" />
+
 
 ---
 
