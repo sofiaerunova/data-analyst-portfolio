@@ -26,7 +26,8 @@ The project is built on a relational synthetic retail dataset modeling a wizardi
 * **KPI Cards:** Total Revenue (**7.43M** galleons), Total Orders (**20K**), Total Units Sold (**65K**), Average Order Value (**372**), YoY Revenue Growth (**+32%**)[cite: 12].
 * **Revenue & Units Trend:** Monthly combo chart tracking revenue and sales volume from September 2022 to September 2025[cite: 12].
 * **Category & Payment Breakdown:** Horizontal bar chart by product category (`Broom` leads with **3.5M**, followed by `Kid Broom` and `Quidditch Wear` at **1.1M** each) and a donut chart showing an even split across payment methods (`Gringotts Credit` 33.96%, `Galleons` 33.36%, `Barter` 32.68%)[cite: 12].
-* **Top-10 Products Table:** Ranked by revenue with price and units sold (`Tesla Thunder`, `Ford Firebolt`, and `Nissan Nimbus` lead revenue)[cite: 12].
+* **Top-10 Products Table:** Ranked by revenue with price and units sold (`Tesla Thunder`, `Ford Firebolt`, and `Nissan Nimbus` lead revenue)[cite: 12].<img width="1314" height="738" alt="2026-11-20_13-06-27" src="https://github.com/user-attachments/assets/25d8fb24-6444-4255-9c61-194c3aa4d1b3" />
+
 
 ### Page 2: Marketing Campaign Effectiveness (`Эффективность маркетинговых компаний`)
 * **Promo KPIs:** Promo Revenue (**1.9M** / **25%** share of total revenue), Total Campaign Spend (**18K**), Overall ROMI (**103**)[cite: 13].
@@ -37,6 +38,7 @@ The project is built on a relational synthetic retail dataset modeling a wizardi
 * **Customer Metrics:** **1.0K** active buyers generating **7K** average revenue per customer; segment split between **Adults (79.79%)** and **Students (20.21%)**[cite: 14].
 * **Hogwarts Houses & Occupations:** Revenue and AOV across `Gryffindor`, `Slytherin`, `Ravenclaw`, and `Hufflepuff`, plus top occupations (`Herbologist`, `Dragon Keeper`, `Healer`)[cite: 14].
 * **Supplier Quadrant (Scatter Chart):** Evaluates suppliers by **Average Lead Time (days)** vs. **Average Reliability** (`Firebolt Consortium` and `Nimbus Racing Broom Co.` lead in speed and reliability, while `Comet Trading Ltd.` shows longer delivery times and lower reliability)[cite: 14].
+<img width="1314" height="738" alt="2026-11-20_13-06-27" src="https://github.com/user-attachments/assets/863dac9c-339d-48a5-8ecc-3e267c62d1ec" />
 
 ---
 
