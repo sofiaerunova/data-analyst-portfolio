@@ -32,9 +32,9 @@ The project is built on a relational synthetic retail dataset modeling a wizardi
 <img width="1314" height="738" alt="2026-11-20_13-06-27" src="https://github.com/user-attachments/assets/25d8fb24-6444-4255-9c61-194c3aa4d1b3" />
 
 ### Page 2: Marketing Campaign Effectiveness (`Эффективность маркетинговых компаний`)
-* **Promo KPIs:** Promo Revenue (**1.9M** / **25%** share of total revenue), Total Campaign Spend (**18K**), Overall ROMI (**103**)[cite: 13].
-* **Campaign Performance & ROMI:** Breakdown across three seasonal campaigns (`Back to Hogwarts Sale`, `Holiday Broom Fest`, `Quidditch World Cup Promo`) by year, spend, orders, and ROMI[cite: 13].
-* **Promo vs. Organic Behavior:** Comparison of Average Order Value (**370** promo vs. **372** non-promo) and Units Per Transaction (**3.23** vs. **3.28**)[cite: 13].
+* **Promo KPIs:** Promo Revenue (**1.9M** / **25%** share of total revenue), Total Campaign Spend (**18K**), Overall ROMI (**103**).
+* **Campaign Performance & ROMI:** Breakdown across three seasonal campaigns (`Back to Hogwarts Sale`, `Holiday Broom Fest`, `Quidditch World Cup Promo`) by year, spend, orders, and ROMI.
+* **Promo vs. Organic Behavior:** Comparison of Average Order Value (**370** promo vs. **372** non-promo) and Units Per Transaction (**3.23** vs. **3.28**).
 <img width="1316" height="738" alt="2026-11-20_13-09-46" src="https://github.com/user-attachments/assets/6d5f2811-ed6b-4362-8cd8-f0032b60b3d4" />
 
 
@@ -50,7 +50,7 @@ The project is built on a relational synthetic retail dataset modeling a wizardi
 ## 🗂 Data Model & DAX Highlights
 
 * **Star Schema:** Fact tables (`sales`, `sale_details`) connected to dimension tables (`products`, `customers`, `campaigns`, `suppliers`) and a custom **`Calendar`** table (`1:*` relationships).
-* **Data Cleaning (Power Query):** Standardized decimal separators and converted `reliability` from text to decimal type; handled missing `supplier_id` values[cite: 14].
+* **Data Cleaning (Power Query):** Standardized decimal separators and converted `reliability` from text to decimal type; handled missing `supplier_id` values.
 * **Key DAX Measures & Calculated Columns:**
   * `Customer Segment` (`adult` vs. `student`) and `Sale Type` (`По акции` vs. `Без акции`).
   * Promo Revenue & Share: `CALCULATE([Revenue], FILTER(sales, NOT ISBLANK(sales[campaign_id]) && sales[campaign_id] <> ""))`.
