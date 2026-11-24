@@ -1,61 +1,61 @@
-# Global YouTube Statistics — Excel Analytics & Dashboard
+# Global YouTube Statistics — Аналитика и дашборд в Excel
 
-🔗 **[View Full PDF Report](https://github.com/sofiaerunova/data-analyst-portfolio/blob/main/projects/youtube-stats-excel-dashboard/Global_YouTube_Statistics.pdf)**
-📊 **[Download Excel Workbook (.xlsx)](https://github.com/sofiaerunova/data-analyst-portfolio/blob/main/projects/youtube-stats-excel-dashboard/Global%20YouTube%20Statistics.xlsx)**
+🔗 **[Смотреть полный PDF-отчёт](https://github.com/sofiaerunova/data-analyst-portfolio/blob/main/projects/youtube-stats-excel-dashboard/Global_YouTube_Statistics.pdf)**
+📊 **[Скачать книгу Excel (.xlsx)](https://github.com/sofiaerunova/data-analyst-portfolio/blob/main/projects/youtube-stats-excel-dashboard/Global%20YouTube%20Statistics.xlsx)**
 
-## 📌 Project Overview
-End-to-end data analytics and visualization project built in **Microsoft Excel (Excel for the web)** based on the *Global YouTube Statistics* dataset. The goal is to evaluate channel monetization, content activity, geographic concentration, cohort dynamics, and 30-day subscriber growth among top YouTube creators.
+## 📌 Обзор проекта
+Комплексный проект по анализу данных и визуализации, выполненный в **Microsoft Excel (Excel для веба)** на основе датасета *Global YouTube Statistics*. Цель проекта — оценить монетизацию каналов, активность публикаций, географическое распределение, когортную динамику и 30-дневный прирост подписчиков среди топовых авторов YouTube.
 
-Key highlights across **945 active channels** (`is_active_content = Active`):
-- **Total estimated annual revenue:** ~$3.55B (`$3,546,475,431`)
-- **Total video views:** ~10.03T (`10,027,318,018,251`)
-- **Average annual revenue per active channel:** ~$3.75M (`$3,752,884`)
+Ключевые показатели по **945 активным каналам** (`is_active_content = Active`):
+- **Суммарный расчётный годовой доход:** ~$3,55 млрд (`$3 546 475 431`)
+- **Суммарное число просмотров:** ~10,03 трлн (`10 027 318 018 251`)
+- **Средний годовой доход на активный канал:** ~$3,75 млн (`$3 752 884`)
 
-## 📁 Dataset
+## 📁 Датасет
 
-- **Source file:** `Global YouTube Statistics.csv` (995 top YouTube channels, 28 initial attributes including subscribers, video views, uploads, estimated monthly/yearly earnings, 30-day subscriber growth, creation year/date, category, channel type, and country).
-- **Workbook structure:**
-  - `raw_data` / `YouTube_data` — raw source data kept intact;
-  - `clean_data` — cleaned dataset with calculated metrics, activity flag, and segmentation fields;
-  - `analysis` — PivotTables, category ABC analysis, top-10 countries, creation cohorts, and top-10 fastest-growing channels;
-  - `dashboard` — final dashboard with KPI cards, charts, and key takeaways.
+- **Исходный файл:** `Global YouTube Statistics.csv` (995 топовых каналов YouTube, 28 исходных признаков, включая подписчиков, просмотры, загрузки, расчётный месячный и годовой доход, прирост подписчиков за 30 дней, год/дату создания, категорию, тип канала и страну).
+- **Структура книги:**
+  - `raw_data` / `YouTube_data` — исходные данные без изменений;
+  - `clean_data` — очищенный датасет с расчётными метриками, флагом активности и полями сегментации;
+  - `analysis` — сводные таблицы, ABC-анализ категорий, топ-10 стран, когорты по году создания и топ-10 самых быстрорастущих каналов;
+  - `dashboard` — итоговый дашборд с KPI-карточками, диаграммами и ключевыми выводами.
 
-## 🛠 Methodology & Tools
-- **Tools:** Microsoft Excel (Excel Online), PivotTables, logical & lookup formulas (`ЕСЛИ`, `ИЛИ`, `СУММ`, `ИНДЕКС`, `ПОИСКПОЗ`, `ЕСЛИОШИБКА`), conditional formatting, charts.
-- **Data Cleaning & Feature Engineering (`clean_data`):**
-  - Standardized missing/text placeholders (`nan`, `NaN`, blanks) in `category_clean` (falling back to `channel_type` and then `Unknown`) and `country_clean` (`Unknown`).
-  - Created content activity flag `is_active_content` (`Active` vs. `Zero_Views_or_Uploads`) to isolate channels with positive views and uploads.
-  - Calculated monetization and engagement metrics: `avg_monthly_earnings`, `avg_yearly_earnings`, `views_per_upload`, `views_per_sub`, and `sub_growth_rate_30d`.
-  - Grouped channels into creation cohorts (`channel_age_cohort`: `До 2010`, `2010–2015`, `2016–2020`, `2021+`).
+## 🛠 Методология и инструменты
+- **Инструменты:** Microsoft Excel (Excel Online), сводные таблицы, логические формулы и формулы поиска (`ЕСЛИ`, `ИЛИ`, `СУММ`, `ИНДЕКС`, `ПОИСКПОЗ`, `ЕСЛИОШИБКА`), условное форматирование, диаграммы.
+- **Очистка данных и feature engineering (`clean_data`):**
+  - Приведены к единому виду пропуски и текстовые заглушки (`nan`, `NaN`, пустые значения) в полях `category_clean` (с подстановкой `channel_type` и далее `Unknown`) и `country_clean` (`Unknown`).
+  - Создан флаг активности контента `is_active_content` (`Active` и `Zero_Views_or_Uploads`), чтобы выделить каналы с положительными просмотрами и загрузками.
+  - Рассчитаны метрики монетизации и вовлечённости: `avg_monthly_earnings`, `avg_yearly_earnings`, `views_per_upload`, `views_per_sub` и `sub_growth_rate_30d`.
+  - Каналы сгруппированы по когортам создания (`channel_age_cohort`: `До 2010`, `2010–2015`, `2016–2020`, `2021+`).
 
-## 🛠️ Project Implementation Stages
-1. **Data Import & Audit:** Loaded `Global YouTube Statistics.csv` into the workbook and audited missing values, zero-activity entries, and formatting issues.
-2. **Cleaning & Calculated Fields:** Built `clean_data` with standardized category/country fields, cohort buckets, and unit/growth metrics.
-3. **Analytical Aggregations (`analysis`):**
-   - Built a category PivotTable sorted by total yearly earnings with revenue share, cumulative share, and **ABC classification** (`A <= 80%`, `B <= 95%`, `C > 95%`).
+## 🛠️ Этапы реализации проекта
+1. **Импорт данных и аудит:** загрузка `Global YouTube Statistics.csv` в книгу Excel и проверка пропусков, нулевой активности и форматов данных.
+2. **Очистка и расчётные поля:** создание листа `clean_data` с нормализованными категориями и странами, когортами и метриками на единицу / динамики роста.
+3. **Аналитические агрегации (`analysis`):**
+   - Построена сводная таблица по категориям, отсортированная по суммарному годовому доходу, с долей в выручке, накопительным итогом и **ABC-классификацией** (`A <= 80%`, `B <= 95%`, `C > 95%`).
      <img width="1182" height="634" alt="2026-11-24_13-07-21" src="https://github.com/user-attachments/assets/267c98f3-2b35-4555-8887-5ed604144fd4" />
 
-   - Built a Top-10 countries PivotTable for active channels.
+   - Построена сводная таблица Топ-10 стран для активных каналов.
      <img width="563" height="336" alt="2026-11-24_13-08-58" src="https://github.com/user-attachments/assets/0ca40280-4a6b-41b0-81d6-c688c2b42d15" />
 
-   - Built a cohort PivotTable tracking channel count, 30-day subscriber growth rate, and average annual revenue per channel.
+   - Построена сводная таблица по когортам с показателями числа каналов, среднего темпа прироста подписчиков за 30 дней и среднегодового дохода на канал.
      <img width="562" height="297" alt="2026-11-24_13-09-55" src="https://github.com/user-attachments/assets/928ac8f7-717a-4285-a894-516e5ae85ded" />
 
-   - Constructed a flat Top-10 fast-growing channels table (`subscribers_for_last_30_days`) using `ИНДЕКС` and `ПОИСКПОЗ` to avoid nested row stepping in Excel for the web.
+   - Собрана плоская таблица Топ-10 самых быстрорастущих каналов (`subscribers_for_last_30_days`) с использованием `ИНДЕКС` и `ПОИСКПОЗ`, чтобы избежать «ступеньки» вложенных строк в Excel для веба.
      <img width="837" height="367" alt="2026-11-24_13-10-49" src="https://github.com/user-attachments/assets/f9dd510e-b9b5-4e1a-bb7d-ae379537e698" />
 
-5. **Dashboard Assembly (`dashboard`):** Designed KPI summary blocks, bar/column/line charts, and structured takeaways.
+4. **Сборка дашборда (`dashboard`):** оформлены KPI-карточки, линейчатые, столбчатые и линейные графики, а также структурированные выводы.
 <img width="819" height="232" alt="2026-11-24_13-11-57" src="https://github.com/user-attachments/assets/5acf7542-4117-4d51-a913-11112576e96b" />
 <img width="859" height="433" alt="2026-11-24_13-12-43" src="https://github.com/user-attachments/assets/765df164-3223-4503-9875-7869d3e3adb9" />
 <img width="857" height="492" alt="2026-11-24_13-13-13" src="https://github.com/user-attachments/assets/3fba739b-beb7-4334-b6c7-b4d02cd45038" />
 <img width="1483" height="317" alt="2026-11-24_13-15-43" src="https://github.com/user-attachments/assets/1b44d65d-f74b-4219-ac24-b6b7fdcd4fb6" />
 
 
-## 📈 Key Findings
-- **High Revenue Concentration (ABC Analysis):** Top categories in **Group A** (`Entertainment` at ~28.2%, `Music` at ~18.6%, `People & Blogs` at ~13.0%, `Comedy` at ~8.3%, `Film & Animation` at ~6.1%, and `People` at ~4.9%) generate roughly **79.0%** of total annual revenue among active channels, while **Group B** (`Education`, `Gaming`, `News & Politics`, `Shows`) brings cumulative share to ~93.5%.
-- **Geographic Dominance:** The **United States** (305 active channels, ~$1.11B annual revenue) and **India** (164 active channels, ~$805M annual revenue) lead the global landscape by a wide margin, followed by `Brazil` (61) and `United Kingdom` (43).
-- **Cohort Dynamics:** The `2010–2015` cohort has the largest volume of active channels (431), whereas newer channels in the `2021+` cohort demonstrate higher average annual revenue per channel (~$5.88M) and higher average 30-day growth rate (~2.22%) in this top sample.
-- **Fastest 30-Day Growth Leaders:** Absolute subscriber additions over 30 days are led by mega-creators and viral/Shorts-driven formats such as `MrBeast` (+8.0M), `DaFuq!?Boom!` (+6.7M, ~34.18% growth rate), and `Jess No Limit` (+5.5M).
+## 📈 Ключевые выводы
+- **Высокая концентрация доходов (ABC-анализ):** ведущие категории **группы A** (`Entertainment` ~28,2%, `Music` ~18,6%, `People & Blogs` ~13,0%, `Comedy` ~8,3%, `Film & Animation` ~6,1% и `People` ~4,9%) приносят около **79,0%** всего годового дохода активных каналов, тогда как **группа B** (`Education`, `Gaming`, `News & Politics`, `Shows`) доводит накопительную долю до ~93,5%.
+- **Географическое лидерство:** **США** (305 активных каналов, ~$1,11 млрд годового дохода) и **Индия** (164 активных канала, ~$805 млн годового дохода) с большим отрывом лидируют на глобальном рынке, за ними следуют `Brazil` (61) и `United Kingdom` (43).
+- **Динамика когорт:** когорта `2010–2015` крупнейшая по числу активных каналов (431), тогда как более молодые каналы из когорты `2021+` в этой топовой выборке демонстрируют более высокий среднегодовой доход на канал (~$5,88 млн) и более высокий средний темп прироста за 30 дней (~2,22%).
+- **Лидеры по 30-дневному росту:** наибольший абсолютный прирост подписчиков за 30 дней показывают мега-авторы и форматы с вирусным/Shorts-трафиком, такие как `MrBeast` (+8,0 млн), `DaFuq!?Boom!` (+6,7 млн, темп прироста ~34,18%) и `Jess No Limit` (+5,5 млн).
 
 ---
-- Author: Sofia Erunova
+- **Автор:** Софья Ерунова
