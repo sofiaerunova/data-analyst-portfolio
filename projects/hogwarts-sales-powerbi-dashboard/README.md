@@ -1,73 +1,77 @@
-# Hogwarts Magic Shop — Sales, Marketing & Supplier Analytics (Power BI)
+# Hogwarts Magic Shop — Аналитика продаж, маркетинга и поставщиков (Power BI)
 
-An interactive 3-page **Power BI** business intelligence dashboard analyzing 4 years of retail operations (2022–2025) for a wizarding goods store: revenue dynamics, product performance, promotional campaign ROI, customer demographics, and supplier reliability.
+Интерактивный трёхстраничный BI-дашборд в **Power BI**, анализирующий 4 года розничных операций (2022–2025) магазина волшебных товаров: динамику выручки, эффективность товаров, ROMI маркетинговых кампаний, портрет клиентов и надёжность поставщиков.
 
-🔗 **[View Full PDF Report](https://github.com/sofiaerunova/data-analyst-portfolio/blob/main/projects/hogwarts-sales-powerbi-dashboard/hogwarts-sales-dashboard.pdf)**
-📊 **[Download Power BI Report (.pbix)](https://github.com/sofiaerunova/data-analyst-portfolio/blob/main/projects/hogwarts-sales-powerbi-dashboard/hogwarts-sales-powerbi.pbix)**
+🔗 **[Смотреть полный PDF-отчёт](https://github.com/sofiaerunova/data-analyst-portfolio/blob/main/projects/hogwarts-sales-powerbi-dashboard/hogwarts-sales-dashboard.pdf)**
+📊 **[Скачать отчёт Power BI (.pbix)](https://github.com/sofiaerunova/data-analyst-portfolio/blob/main/projects/hogwarts-sales-powerbi-dashboard/hogwarts-sales-powerbi.pbix)**
 
 ---
 
-## 📌 Project Overview
+## 📌 Обзор проекта
 
-The project is built on a relational synthetic retail dataset modeling a wizarding goods store (**20,000 orders** and **65,000+ sold units** across **2022–2025**):
+Проект построен на синтетическом реляционном датасете розничного магазина волшебных товаров (**20 000 заказов** и **65 000+ проданных единиц** за **2022–2025** годы):
 
-* **`sales` (Orders / Fact Table):** Transaction-level headers including order ID, purchase date (`02.01.2022` – `31.12.2025`), customer ID, payment method (`Gringotts Credit`, `Galleons`, `Barter`), and optional promotional campaign ID (`campaign_id`).
-* **`sale_details` (Order Line Items / Fact Table):** Granular line-item records linking orders to products, quantities sold, and revenue spent in galleons.
-* **`products` (Product Catalog):** Wizard merchandise across 5 categories (`Broom`, `Kid Broom`, `Quidditch Wear`, `Accessory`, `Supplements`), item prices, supplier links, and flight/handling attributes (`speed`, `control`) for brooms.
-* **`customers` (Customer Profiles):** ~1,000 active buyers with demographic and wizarding attributes such as Hogwarts house (`Gryffindor`, `Slytherin`, `Ravenclaw`, `Hufflepuff`), year/course, occupation (`Herbologist`, `Dragon Keeper`, `Healer`, `Quidditch Player`, `Ministry of Magic Employee`, `Auror`), and customer segment (`adult` vs. `student`).
-* **`campaigns` (Marketing Campaigns):** Promotional initiatives (`Back to Hogwarts Sale`, `Holiday Broom Fest`, `Quidditch World Cup Promo`) with annual marketing budgets (`spend`) and active periods.
-* **`suppliers` (Suppliers):** Vendor directory containing supplier names, delivery lead time in days (`lead_time_days`), and reliability ratings (`reliability`).
+- **`sales` (Заказы / Таблица фактов):** заголовки транзакций, включая ID заказа, дату покупки (`02.01.2022` – `31.12.2025`), ID клиента, способ оплаты (`Gringotts Credit`, `Galleons`, `Barter`) и необязательный ID промо-кампании (`campaign_id`).
+- **`sale_details` (Позиции заказов / Таблица фактов):** детализация позиций чека, связывающая заказы с товарами, количеством проданных единиц и выручкой в галлеонах.
+- **`products` (Каталог товаров):** ассортимент волшебных товаров по 5 категориям (`Broom`, `Kid Broom`, `Quidditch Wear`, `Accessory`, `Supplements`), цены товаров, связи с поставщиками и характеристики полёта/управляемости (`speed`, `control`) для мётел.
+- **`customers` (Профили клиентов):** ~1 000 активных покупателей с демографическими и волшебными атрибутами: факультет Хогвартса (`Gryffindor`, `Slytherin`, `Ravenclaw`, `Hufflepuff`), курс/год, род занятий (`Herbologist`, `Dragon Keeper`, `Healer`, `Quidditch Player`, `Ministry of Magic Employee`, `Auror`) и сегмент клиента (`adult` vs. `student`).
+- **`campaigns` (Маркетинговые кампании):** промо-активности (`Back to Hogwarts Sale`, `Holiday Broom Fest`, `Quidditch World Cup Promo`) с годовыми маркетинговыми бюджетами (`spend`) и периодами действия.
+- **`suppliers` (Поставщики):** справочник поставщиков с названиями, сроком доставки в днях (`lead_time_days`) и оценками надёжности (`reliability`).
 <img width="1081" height="714" alt="2026-11-20_13-11-09" src="https://github.com/user-attachments/assets/d0581c28-6654-4d96-aa5b-9d1cdd8278f2" />
 
 
 ---
 
-## 📊 Dashboard Structure
+## 📊 Структура дашборда
 
-### Page 1: Sales Overview (`Обзор продаж`)
-* **KPI Cards:** Total Revenue (**7.43M** galleons), Total Orders (**20K**), Total Units Sold (**65K**), Average Order Value (**372**), YoY Revenue Growth (**+32%**).
-* **Revenue & Units Trend:** Monthly combo chart tracking revenue and sales volume from September 2022 to September 2025.
-* **Category & Payment Breakdown:** Horizontal bar chart by product category (`Broom` leads with **3.5M**, followed by `Kid Broom` and `Quidditch Wear` at **1.1M** each) and a donut chart showing an even split across payment methods (`Gringotts Credit` 33.96%, `Galleons` 33.36%, `Barter` 32.68%).
-* **Top-10 Products Table:** Ranked by revenue with price and units sold (`Tesla Thunder`, `Ford Firebolt`, and `Nissan Nimbus` lead revenue).
+### Страница 1: Sales Overview (`Обзор продаж`)
+- **KPI-карточки:** Общая выручка (**7,43M** галлеонов), Всего заказов (**20K**), Продано единиц (**65K**), Средний чек (**372**), Рост выручки год к году / YoY (**+32%**).
+- **Динамика выручки и единиц:** помесячная комбинированная диаграмма выручки и объёма продаж с сентября 2022 по сентябрь 2025 года.
+- **Разбивка по категориям и способам оплаты:** горизонтальная столбчатая диаграмма по категориям товаров (лидирует `Broom` с **3,5M**, за ним идут `Kid Broom` и `Quidditch Wear` — по **1,1M**) и кольцевая диаграмма с равномерным распределением по способам оплаты (`Gringotts Credit` 33,96%, `Galleons` 33,36%, `Barter` 32,68%).
+- **Таблица Топ-10 товаров:** ранжирование по выручке с ценой и числом проданных единиц (лидеры по выручке — `Tesla Thunder`, `Ford Firebolt` и `Nissan Nimbus`).
 <img width="1314" height="738" alt="2026-11-20_13-06-27" src="https://github.com/user-attachments/assets/25d8fb24-6444-4255-9c61-194c3aa4d1b3" />
 
-### Page 2: Marketing Campaign Effectiveness (`Эффективность маркетинговых компаний`)
-* **Promo KPIs:** Promo Revenue (**1.9M** / **25%** share of total revenue), Total Campaign Spend (**18K**), Overall ROMI (**103**).
-* **Campaign Performance & ROMI:** Breakdown across three seasonal campaigns (`Back to Hogwarts Sale`, `Holiday Broom Fest`, `Quidditch World Cup Promo`) by year, spend, orders, and ROMI.
-* **Promo vs. Organic Behavior:** Comparison of Average Order Value (**370** promo vs. **372** non-promo) and Units Per Transaction (**3.23** vs. **3.28**).
+### Страница 2: Marketing Campaign Effectiveness (`Эффективность маркетинговых компаний`)
+- **Промо-KPI:** Выручка по акциям (**1,9M** / **25%** доли от общей выручки), Общие затраты на кампании (**18K**), Итоговый ROMI (**103**).
+- **Эффективность кампаний и ROMI:** разбивка по трём сезонным кампаниям (`Back to Hogwarts Sale`, `Holiday Broom Fest`, `Quidditch World Cup Promo`) по годам, затратам, заказам и ROMI.
+- **Промо и органическое поведение:** сравнение среднего чека (**370** по акции против **372** без акции) и числа товаров в заказе (**3,23** против **3,28**).
 <img width="1316" height="738" alt="2026-11-20_13-09-46" src="https://github.com/user-attachments/assets/6d5f2811-ed6b-4362-8cd8-f0032b60b3d4" />
 
 
-### Page 3: Customers & Suppliers (`Клиенты и поставщики`)
-* **Customer Metrics:** **1.0K** active buyers generating **7K** average revenue per customer; segment split between **Adults (79.79%)** and **Students (20.21%).
-* **Hogwarts Houses & Occupations:** Revenue and AOV across `Gryffindor`, `Slytherin`, `Ravenclaw`, and `Hufflepuff`, plus top occupations (`Herbologist`, `Dragon Keeper`, `Healer`).
-* **Supplier Quadrant (Scatter Chart):** Evaluates suppliers by **Average Lead Time (days)** vs. **Average Reliability** (`Firebolt Consortium` and `Nimbus Racing Broom Co.` lead in speed and reliability, while `Comet Trading Ltd.` shows longer delivery times and lower reliability).
+### Страница 3: Customers & Suppliers (`Клиенты и поставщики`)
+- **Метрики клиентов:** **1,0K** активных покупателей со средней выручкой **7K** на клиента; распределение по сегментам: **Взрослые (79,79%)** и **Студенты (20,21%)**.
+- **Факультеты Хогвартса и профессии:** выручка и средний чек в разрезе `Gryffindor`, `Slytherin`, `Ravenclaw` и `Hufflepuff`, а также ключевые профессии (`Herbologist`, `Dragon Keeper`, `Healer`).
+- **Квадрант поставщиков (точечная диаграмма):** оценка поставщиков по **среднему сроку доставки (в днях)** и **средней надёжности** (`Firebolt Consortium` и `Nimbus Racing Broom Co.` лидируют по скорости и надёжности, тогда как `Comet Trading Ltd.` показывает более долгую доставку и более низкую надёжность).
 <img width="1314" height="736" alt="2026-11-20_13-10-24" src="https://github.com/user-attachments/assets/6d67d3fe-0c61-4ab2-a71a-737abac13a3c" />
 
 
 ---
 
-## 🗂 Data Model & DAX Highlights
+## 🗂 Модель данных и ключевые DAX-решения
 
-* **Star Schema:** Fact tables (`sales`, `sale_details`) connected to dimension tables (`products`, `customers`, `campaigns`, `suppliers`) and a custom **`Calendar`** table (`1:*` relationships).
-* **Data Cleaning (Power Query):** Standardized decimal separators and converted `reliability` from text to decimal type; handled missing `supplier_id` values.
-* **Key DAX Measures & Calculated Columns:**
-  * `Customer Segment` (`adult` vs. `student`) and `Sale Type` (`По акции` vs. `Без акции`).
-  * Promo Revenue & Share: `CALCULATE([Revenue], FILTER(sales, NOT ISBLANK(sales[campaign_id]) && sales[campaign_id] <> ""))`.
-  * `ROMI`, `YoY Revenue Growth`, `Average Order Value`, `Units Per Transaction`, `Avg Orders per Day/Month`, and supplier performance averages.
-
----
-
-## 📈 Key Findings
-
-1. **Brooms Drive Core Revenue:** Standard and kid brooms account for over **60% of total revenue (4.6M of 7.43M)**, led by high-ticket models like *Tesla Thunder* (700 galleons) and *Ford Firebolt* (500 galleons).
-2. **Promotions Drive Volume, Not Basket Size:** Marketing campaigns generate **25% of revenue** with strong overall ROMI (**103**, peaking at **155** for *Back to Hogwarts Sale*), yet AOV (**370 vs. 372**) and basket size (**3.23 vs. 3.28**) remain unchanged — introducing tiered thresholds (e.g., *"Spend 450+ galleons for a bonus"*) can lift basket size.
-3. **Supplier Consolidation Opportunity:** *Firebolt Consortium* (5-day lead time, 0.98 reliability) and *Nimbus Racing Broom Co.* (7 days, 0.95) significantly outperform *Comet Trading Ltd.* (12 days, 0.80), making them priority partners for high-demand inventory.
+- **Схема «звезда»:** таблицы фактов (`sales`, `sale_details`), связанные с таблицами измерений (`products`, `customers`, `campaigns`, `suppliers`) и пользовательской таблицей **`Calendar`** (связи `1:*`).
+- **Очистка данных (Power Query):** унификация десятичных разделителей и приведение `reliability` из текста в числовой десятичный тип; обработка пропусков `supplier_id`.
+- **Ключевые меры и вычисляемые столбцы DAX:**
+  - `Customer Segment` (`adult` vs. `student`) и `Sale Type` (`По акции` vs. `Без акции`).
+  - Выручка и доля промо: `CALCULATE([Revenue], FILTER(sales, NOT ISBLANK(sales[campaign_id]) && sales[campaign_id] <> ""))`.
+  - `ROMI`, `YoY Revenue Growth`, `Average Order Value`, `Units Per Transaction`, `Avg Orders per Day/Month` и средние показатели эффективности поставщиков.
 
 ---
 
-## 🛠 Tools Used
-* **Power BI Desktop** (Power Query, Data Modeling, DAX, Interactive Slicers & Visuals)
+## 📈 Ключевые выводы
+
+1. **Мётлы формируют ядро выручки:** обычные и детские мётлы приносят более **60% общей выручки (4,6M из 7,43M)** во главе с дорогими моделями вроде *Tesla Thunder* (700 галлеонов) и *Ford Firebolt* (500 галлеонов).
+2. **Промо-акции повышают объём, но не размер чека:** маркетинговые кампании обеспечивают **25% выручки** при высоком общем ROMI (**103**, с пиком **155** у *Back to Hogwarts Sale*), однако средний чек (**370 vs. 372**) и число единиц в заказе (**3,23 vs. 3,28**) почти не меняются — введение пороговых механик (например, *«Бонус при покупке от 450 галлеонов»*) поможет увеличить корзину.
+3. **Потенциал консолидации поставщиков:** *Firebolt Consortium* (срок доставки 5 дней, надёжность 0,98) и *Nimbus Racing Broom Co.* (7 дней, надёжность 0,95) заметно опережают *Comet Trading Ltd.* (12 дней, надёжность 0,80), что делает их приоритетными партнёрами для ходовых позиций.
+
+---
+
+## 🛠 Используемые инструменты
+- **Power BI Desktop** (Power Query, моделирование данных, DAX, интерактивные срезы и визуализации)
+
+---
+
+- **Автор:** Софья Ерунова
 
 ---
 
