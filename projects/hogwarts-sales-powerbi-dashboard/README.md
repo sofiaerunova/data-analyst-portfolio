@@ -2,8 +2,8 @@
 
 Интерактивный трёхстраничный BI-дашборд в **Power BI**, анализирующий 4 года розничных операций (2022–2025) магазина волшебных товаров: динамику выручки, эффективность товаров, ROMI маркетинговых кампаний, портрет клиентов и надёжность поставщиков.
 
-🔗 **[Смотреть полный PDF-отчёт](https://github.com/sofiaerunova/data-analyst-portfolio/blob/main/projects/hogwarts-sales-powerbi-dashboard/hogwarts-sales-dashboard.pdf)**
-📊 **[Скачать отчёт Power BI (.pbix)](https://github.com/sofiaerunova/data-analyst-portfolio/blob/main/projects/hogwarts-sales-powerbi-dashboard/hogwarts-sales-powerbi.pbix)**
+🔗 **[Смотреть полный PDF-отчёт](https://github.com/sofiaerunova/data-analyst-portfolio/blob/main/projects/hogwarts-sales-powerbi-dashboard/1.hogwarts-sales-dashboard.pdf)**
+📊 **[Скачать отчёт Power BI (.pbix)](https://github.com/sofiaerunova/data-analyst-portfolio/blob/main/projects/hogwarts-sales-powerbi-dashboard/2.hogwarts-sales-powerbi.pbix)**
 
 ---
 
