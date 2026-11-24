@@ -1,74 +1,74 @@
-# 🛒 Amazon Pricing Factors and Buyer Demand Analysis (EDA & Segmentation)
+# 🛒 Анализ ценовых факторов и покупательского спроса на Amazon (EDA и сегментация)
 
-## 📌 Project Overview
-* **Context:** The dataset contains information on 1,000+ Amazon products (including categories, actual and discounted prices, discount percentages, user ratings, and review counts).
-* **Objective:** Identify key drivers of buyer engagement, evaluate the impact of discount magnitude on review counts and ratings, and explore the pricing structure across product categories.
-* **Primary Hypothesis ($H_1$):** Discount depth (`discount_percentage`) and product price segment have a statistically significant impact on customer engagement (`rating_count`), with deeply discounted items in the *Computers & Accessories* category generating the highest volume of reviews.
-
----
-
-## 📁 Dataset
-The dataset includes the following key columns:
-* `product_id` / `product_name` — Product ID and title
-* `category` — Original hierarchical product category
-* `discounted_price` / `actual_price` — Discounted price and original price
-* `discount_percentage` — Discount percentage
-* `rating` / `rating_count` — Product rating and number of reviews/ratings
-* `user_id` / `user_name` — User IDs and names who left reviews
-* `review_id` / `review_title` / `review_content` — Review details (ID, title, text)
-* `img_link` / `product_link` — Links to images and the official website
+## 📌 Обзор проекта
+- **Контекст:** датасет содержит информацию о более чем 1 000 товаров на Amazon (включая категории, полные цены и цены со скидкой, размер скидки в процентах, рейтинги пользователей и количество отзывов).
+- **Цель:** выявить ключевые драйверы покупательской вовлечённости, оценить влияние размера скидки на количество отзывов и рейтинги, а также исследовать ценовую структуру по категориям товаров.
+- **Основная гипотеза ($H_1$):** глубина скидки (`discount_percentage`) и ценовой сегмент товара оказывают статистически значимое влияние на вовлечённость покупателей (`rating_count`), при этом товары с большими скидками в категории *Computers & Accessories* генерируют наибольший объём отзывов.
 
 ---
 
-## 🛠 Methodology & Tools
-* **Language:** Python
-* **Libraries:** 
-  * `Pandas` — data cleaning, transformation, grouping, and aggregation
-  * `Seaborn` — exploratory data visualization and statistical graphics
-  * `SciPy` — statistical analysis and hypothesis testing
-  * `SQLite3` — database operations (where applicable)
+## 📁 Датасет
+Датасет включает следующие ключевые столбцы:
+- `product_id` / `product_name` — идентификатор и название товара
+- `category` — исходная иерархическая категория товара
+- `discounted_price` / `actual_price` — цена со скидкой и полная (исходная) цена
+- `discount_percentage` — процент скидки
+- `rating` / `rating_count` — рейтинг товара и количество отзывов/оценок
+- `user_id` / `user_name` — идентификаторы и имена пользователей, оставивших отзывы
+- `review_id` / `review_title` / `review_content` — детали отзывов (идентификатор, заголовок, текст)
+- `img_link` / `product_link` — ссылки на изображения и официальную страницу товара
 
 ---
 
-## 🛠️ Project Implementation Stages
-
-1. **Data Preparation & Preprocessing:**
-   - Import required libraries (`Pandas`, `Plotly`, `SciPy`) and load data.
-   - Clean currency symbols (`₹`) and thousand separators from price columns, converting them to numeric types (`float64`).
-   - Handle missing values and anomalies (such as invalid characters in ratings like `'|'`, verified via official links).
-   - Normalize and split complex categories (`category`) into `main_category` and `sub_category`.
-   - Create auxiliary tables and features (`rating_category`, `discount_sum`, normalizing user lists and orders).
-
-2. **Exploratory Data Analysis (EDA):**
-   - Analyze price distributions and discount sizes.
-   - Investigate product category popularity (led by *Electronics*, *Computers & Accessories*, *Home & Kitchen*).
-   - Evaluate relationships between ratings, review counts (`rating_count`), and discount depths.
-
-3. **Visualization:**
-   - Interactive charts and dashboards built using `Plotly`.
+## 🛠 Методология и инструменты
+- **Язык программирования:** Python
+- **Библиотеки:** 
+  - `Pandas` — очистка, преобразование, группировка и агрегация данных
+  - `Seaborn` — разведочный анализ данных и статистическая визуализация
+  - `SciPy` — статистический анализ и проверка гипотез
+  - `SQLite3` — работа с базами данных (при необходимости)
 
 ---
 
-## 📈 Key Findings
+## 🛠️ Этапы реализации проекта
 
-* **Category Leaders:** 
-  * **Electronics** is the absolute leader in product volume and Amazon's primary revenue driver.
-  * **Computers & Accessories** ranks 2nd in volume.
-  * **Home & Kitchen** takes 3rd place, with other categories lagging significantly.
-* **Subcategory Highlights:** 
-  * **Accessories & Peripherals** (under Computers & Accessories) is the #1 subcategory on the entire platform.
-  * Other top performers include **Kitchen & Appliances** and **Home Theater & TV**.
-* **Profit Concentration:** 80% of Amazon's total profit is generated by three core segments: *Home Theater & TV*, *Mobiles & Accessories*, and *Kitchen & Appliances*.
-* **Demand & Pricing:** 
-  * Purchase volume peaks for items **under ₹10k** and decreases as prices rise. High-end purchases concentrate in Electronics.
-  * *Top seller:* pTron Type-C cable (*Computers & Accessories*) with **216 purchases**.
-  * *Most expensive top item:* Sony TV with **64 purchases**.
-* **Quality & Ratings:** 
-  * The vast majority of products are high quality (**4.0–4.8** rating). Mid-tier items (3.0–3.9) are 3x less frequent, while extremely poor or flawless items are rare.
-* **Discounts:** 
-  * Deepest discounts appear in *Computers & Accessories* and *Electronics*, while *Home & Kitchen* features smaller average discounts.
-  * The absolute majority of item discounts range between **₹370 and ₹1,959**.
+1. **Подготовка и предобработка данных:**
+   - Импорт необходимых библиотек (`Pandas`, `Plotly`, `SciPy`) и загрузка данных.
+   - Очистка столбцов с ценами от символов валюты (`₹`) и разделителей тысяч, приведение значений к числовому типу (`float64`).
+   - Обработка пропущенных значений и аномалий (например, некорректных символов в рейтингах вроде `'|'`, проверенных по официальным ссылкам).
+   - Нормализация и разделение сложных категорий (`category`) на `main_category` и `sub_category`.
+   - Создание вспомогательных таблиц и признаков (`rating_category`, `discount_sum`, нормализация списков пользователей и заказов).
+
+2. **Разведочный анализ данных (EDA):**
+   - Анализ распределения цен и размеров скидок.
+   - Исследование популярности товарных категорий (лидеры: *Electronics*, *Computers & Accessories*, *Home & Kitchen*).
+   - Оценка взаимосвязи между рейтингами, количеством отзывов (`rating_count`) и глубиной скидки.
+
+3. **Визуализация:**
+   - Интерактивные графики и дашборды, построенные с помощью `Plotly`.
 
 ---
 
-* **Author:** Sofia Erunova
+## 📈 Ключевые выводы
+
+- **Лидеры среди категорий:** 
+  - **Electronics** — абсолютный лидер по объёму товаров и главный драйвер выручки Amazon.
+  - **Computers & Accessories** занимает 2-е место по объёму.
+  - **Home & Kitchen** занимает 3-е место, остальные категории заметно отстают.
+- **Ключевые подкатегории:** 
+  - **Accessories & Peripherals** (в составе *Computers & Accessories*) — подкатегория № 1 на всей платформе.
+  - В число других лидеров входят **Kitchen & Appliances** и **Home Theater & TV**.
+- **Концентрация прибыли:** 80% всей прибыли Amazon генерируют три основных сегмента: *Home Theater & TV*, *Mobiles & Accessories* и *Kitchen & Appliances*.
+- **Спрос и ценообразование:** 
+  - Объём покупок достигает пика для товаров дешевле **₹10k** и снижается по мере роста цены. Дорогостоящие покупки сосредоточены в категории *Electronics*.
+  - *Лидер продаж:* кабель pTron Type-C (*Computers & Accessories*) — **216 покупок**.
+  - *Самый дорогой товар в топе:* телевизор Sony TV — **64 покупки**.
+- **Качество и рейтинги:** 
+  - Подавляющее большинство товаров отличается высоким качеством (рейтинг **4.0–4.8**). Товары среднего уровня (3.0–3.9) встречаются в 3 раза реже, а крайне низкие или идеально максимальные оценки являются редкостью.
+- **Скидки:** 
+  - Наиболее глубокие скидки представлены в категориях *Computers & Accessories* и *Electronics*, тогда как в *Home & Kitchen* средний размер скидки ниже.
+  - Абсолютное большинство скидок на товары находится в диапазоне от **₹370 до ₹1,959**.
+
+---
+
+- **Автор:** Софья Ерунова
