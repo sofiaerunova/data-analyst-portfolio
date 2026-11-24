@@ -1,7 +1,7 @@
 # Global YouTube Statistics — Excel Analytics & Dashboard
 
-🔗 **[View Full PDF Report](https://github.com/sofiaerunova/data-analyst-portfolio/blob/main/projects/youtube-stats-excel-dashboard/youtube-dashboard.pdf)**
-📊 **[Download Excel Workbook (.xlsx)](https://github.com/sofiaerunova/data-analyst-portfolio/blob/main/projects/youtube-stats-excel-dashboard/youtube.xlsx)**
+🔗 **[View Full PDF Report](https://github.com/sofiaerunova/data-analyst-portfolio/blob/main/projects/youtube-stats-excel-dashboard/Global_YouTube_Statistics.pdf)**
+📊 **[Download Excel Workbook (.xlsx)](https://github.com/sofiaerunova/data-analyst-portfolio/blob/main/projects/youtube-stats-excel-dashboard/Global%20YouTube%20Statistics.xlsx)**
 
 ## 📌 Project Overview
 End-to-end data analytics and visualization project built in **Microsoft Excel (Excel for the web)** based on the *Global YouTube Statistics* dataset. The goal is to evaluate channel monetization, content activity, geographic concentration, cohort dynamics, and 30-day subscriber growth among top YouTube creators.
